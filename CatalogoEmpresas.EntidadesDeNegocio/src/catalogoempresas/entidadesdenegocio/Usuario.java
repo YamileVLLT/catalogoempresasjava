@@ -16,11 +16,12 @@ public class Usuario {
     private LocalDate fechaRegistro;
     private int top_aux;
     private String confirmePassword_aux;
+    private Rol rol;
 
     public Usuario() {
     }
 
-    public Usuario(int id, int idRol, String nombre, String apellido, String login, String password, byte estatus, LocalDate fechaRegistro, int top_aux, String confirmePassword_aux) {
+    public Usuario(int id, int idRol, String nombre, String apellido, String login, String password, byte estatus, LocalDate fechaRegistro, int top_aux, String confirmePassword_aux, Rol rol) {
         this.id = id;
         this.idRol = idRol;
         this.nombre = nombre;
@@ -31,7 +32,8 @@ public class Usuario {
         this.fechaRegistro = fechaRegistro;
         this.top_aux = top_aux;
         this.confirmePassword_aux = confirmePassword_aux;
-    }
+        this.rol = rol;
+    }   
 
     public int getId() {
         return id;
@@ -111,8 +113,15 @@ public class Usuario {
 
     public void setConfirmePassword_aux(String confirmePassword_aux) {
         this.confirmePassword_aux = confirmePassword_aux;
+    }    
+
+    public Rol getRol() {
+        return rol;
     }
-    
+
+    public void setRol(Rol rol) {
+        this.rol = rol;
+    }
     
     
 }
