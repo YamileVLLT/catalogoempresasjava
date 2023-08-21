@@ -33,6 +33,7 @@ public class Usuario {
         this.top_aux = top_aux;
         this.confirmePassword_aux = confirmePassword_aux;
         this.rol = rol;
+        
     }   
 
     public int getId() {
@@ -121,6 +122,11 @@ public class Usuario {
 
     public void setRol(Rol rol) {
         this.rol = rol;
+    }
+    
+    public class EstatusUsuario{
+        public static final byte ACTIVO = 1;
+        public static final byte INACTIVO = 2;
     }
     
     
